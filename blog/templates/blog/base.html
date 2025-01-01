@@ -39,6 +39,7 @@
                     </div>
                     <!-- Navbar Right Side -->
                     {%if user.is_authenticated%}
+                        <a class="nav-item nav-link-white" href="{% url 'post-create' %}">New Post</a>
                         <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                         <form method="POST" action="{% url 'logout' %}" style="display: inline;">
                             {% csrf_token %}
